@@ -29,15 +29,14 @@ public class Validacao {
   public void validacaoDasProximasPerguntas(Mensagem mensagem, Pessoa pessoa, boolean erroTentativas, Scanner scanner) {
     // Valido se continuo perguntando ou se vou direto para a mensagem final
     if (erroTentativas == false)
-      erroTentativas = mensagem.realizaPerguntaTeveSintomasRecenmente(pessoa, scanner);
+      erroTentativas = mensagem.realizaPerguntaTeveSintomasRecentemente(pessoa, scanner);
 
     if (erroTentativas == false) {
       erroTentativas = mensagem.realizaPerguntaTeveContatoPessoasAssintomaticas(pessoa, scanner);
     }
 
     if (erroTentativas == false) {
-      // erroTentativas = mensagem.realizaPerguntaEstaRetornandoViagemExterior(pessoa,
-      // scanner);
+      erroTentativas = mensagem.realizaPerguntaEstaRetornandoViagemExterior(pessoa, scanner);
     }
   }
 }
