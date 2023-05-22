@@ -111,6 +111,6 @@ public class Mensagem {
 
   public void imprimirMensagemErro() {
     System.out.println("Não foi possível realizar o diagnóstico." +
-        "Gentileza procurar ajuda medica caso apareça algum sintoma.");
+        "\nGentileza procurar ajuda medica caso apareça algum sintoma.");
   }
 }
